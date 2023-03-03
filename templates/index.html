@@ -16,24 +16,37 @@
     <h1 class="text-center display-3">Cupcakes</h1>
     <div class="row justify-content-center">
       <div class="col-6">
-        <ul class="list-group">
-          {% for cake in cupcakes %}
-          <li class="list-group-item d-flex justify-content-between align-items-center">{{cake.size}}  {{cake.flavor}} <img src="{{cake.image}}"  height="100"></li>
-          {% endfor %}
+       
+
+        <ul id="cupcakes-list">
         </ul>
         <br>
-        <h3 class="text-center"> add a Cupcake</h3>
-        <form action="POST" class="text-center"><br>
-          <label for="flavor">Falvor:</label><br>
-          <input type="text" id="flavor" name="flavor"><br>
-          <label for="size">Size:</label><br>
-          <input type="text" id="size" name="size"><br>
-          <label for="rating">Rating:</label><br>
-          <input type="text" id="rating" name="rating"><br>
-          <label for="image">Image:</label><br>
-          <input type="text" id="image" name="image"><br>
-      
+        <h2>Add a new cupcake!</h2>
+
+        <form id="new-cupcake-form">
+          <div>
+            <label for="form-flavor">Flavor: </label>
+            <input name="flavor" id="form-flavor">
+          </div>
+        
+          <div>
+            <label for="form-size">Size: </label>
+            <input name="size" id="form-size">
+          </div>
+        
+          <div>
+            <label for="form-rating">Rating: </label>
+            <input type="number" name="rating" id="form-rating">
+          </div>
+        
+          <div>
+            <label for="form-image">Image: </label>
+            <input name="image" id="form-image">
+          </div>
+        
+          <button>Add!</button>
         </form>
+        
       </div>
      
     </div>
@@ -48,7 +61,7 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-  <script src="static/todos.js"></script>
+  <script src="static/cupcakes.js"></script>
 </body>
 
 </html>
