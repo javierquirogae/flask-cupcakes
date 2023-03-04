@@ -33,7 +33,7 @@ async function showInitialCupcakes() {
 /** handle form for adding of new cupcakes */
 
 $("#new-cupcake-form").on("submit", async function (evt) {
-  evt.preventDefault();
+  
 
   let flavor = $("#form-flavor").val();
   let rating = $("#form-rating").val();
@@ -50,7 +50,9 @@ $("#new-cupcake-form").on("submit", async function (evt) {
   let newCupcake = $(generateCupcakeHTML(newCupcakeResponse.data.cupcake));
   $("#cupcakes-list").append(newCupcake);
   $("#new-cupcake-form").trigger("reset");
-  location.reload();
+  $("#new-cupcake-form").reload();
+  evt.reload();
+ 
 });
 
 
